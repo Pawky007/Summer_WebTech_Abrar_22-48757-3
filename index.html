@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Registration</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+  <div class="form">
+    <h1>Course Registration</h1>
+    <h4>Full Name</h4>
+    <input id="Fullname" class="input" type="text" placeholder="Enter Full Name" />
+    <h4>Enter The Email</h4>
+    <input id="Email" class="input" type="text" placeholder="Enter The Email Address" />
+    <h4>Age</h4>
+    <input id="Age" class="input" type="number" placeholder="Enter Age" />
+    <h4>Course Selection</h4>
+    <select id="Courses" name="Course" class="input">
+      <option value="">-- Select Course --</option>
+      <option value="Web tech">Web Technology</option>
+      <option value="Computer Graphics">Computer Graphics</option>
+      <option value="JAVA">Java</option>
+      <option value="C++">C++</option>
+    </select>
+    <br />
+    <button onclick="myfuction()" class="btn">Submit</button>
+
+    <p id="errorMsg" class="error">Please fill at least 3 inputs before submitting.</p>
+  </div>
+  <img id="myImg" class="picture" src="http://t2.gstatic.com/images?q=tbn:ANd9GcTfN7rMPTrPhIbTRk0TKY--OYKb-27w1Pz4gpN4qobrq2F6r1AOwyob_50qKmGllQ" alt="BMW Car">
+  <button style="margin-left: 800px;" onclick="image()">Show Image</button>
+  <button style="margin-left: 800px;" onclick="image()">Hide Image</button>
+
+  <script>
+    function myfuction() {
+      const fullname = document.getElementById('Fullname').value.trim();
+      const email = document.getElementById('Email').value.trim();
+      const age = document.getElementById('Age').value.trim();
+      const course = document.getElementById('Courses').value.trim();
+
+      let filledCount = 0;
+      if (fullname !== '') filledCount++;
+      if (email !== '') filledCount++;
+      if (age !== '') filledCount++;
+      if (course !== '') filledCount++;
+
+      const errorMsg = document.getElementById('errorMsg');
+
+      if (filledCount < 3) {
+        errorMsg.style.display = 'block';
+      } else {
+        errorMsg.style.display = 'none';
+        
+      }
+      function image()
+      {
+        const img = document.getElementById('myImg');
+        if (img.style.display === 'none' || img.style.display === '') 
+        {
+        img.style.display = 'block';
+        } 
+        else 
+        {
+            img.style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
