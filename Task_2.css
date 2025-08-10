@@ -1,0 +1,92 @@
+<style>
+      header {
+        background-color: #1e90ff;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      #para1 {
+        color: #ff6347; 
+        font-family: Arial, sans-serif;
+      }
+
+     
+      .highlight {
+        color: #ff6347;
+        font-family: Arial, sans-serif;
+      }
+
+      #para3 {
+        color: #32cd32; 
+        font-family: "Courier New", monospace;
+      }
+
+      span {
+        color: #ff6347; 
+        font-family: Arial, sans-serif;
+      }
+
+      ul {
+        border: 2px solid black;
+        width: fit-content;
+        padding: 10px;
+        list-style-type: disc;
+      }
+
+
+      .link-box {
+        border: 2px dashed #aaa;
+        width: 200px;
+        height: 100px;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .link-box a {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        text-decoration: none;
+        color: #1e90ff;
+      }
+
+      .fixed-box1,
+      .fixed-box2,
+      .fixed-box3 {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        opacity: 0.8;
+      }
+
+      .fixed-box1 {
+        background-color: red;
+        z-index: 1;
+      }
+
+      .fixed-box2 {
+        background-color: green;
+        z-index: 2;
+        left: 40px;
+        top: 40px;
+      }
+
+      .fixed-box3 {
+        background-color: blue;
+        z-index: 3;
+        left: 60px;
+        top: 60px;
+      }
+
+
+      .overflow-box {
+        width: 300px;
+        height: 100px;
+        border: 1px solid black;
+        overflow: auto;
+        margin-top: 200px;
+      }
+    </style>
